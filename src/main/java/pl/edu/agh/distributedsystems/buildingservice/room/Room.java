@@ -11,7 +11,6 @@ import javax.persistence.*;
 @Entity
 @Table(name = "Rooms")
 @Data
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Room {
 
     @Id
@@ -29,6 +28,9 @@ public class Room {
     @JoinColumn(name = "fk_building")
     @JsonBackReference
     private Building building;
+
+    protected Room() {
+    }
 
     public Room(int roomNumber, int floorNumber) {
         this.roomNumber = roomNumber;

@@ -11,7 +11,6 @@ import javax.persistence.*;
 @Entity
 @Table(name = "Addresses")
 @Data
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Address {
 
     @Id
@@ -29,6 +28,9 @@ public class Address {
     private String zipCode;
     private String city;
     private String country;
+
+    protected Address() {
+    }
 
     public Address(String houseNumber, String street, String zipCode, String city, String country) {
         this.houseNumber = houseNumber;
