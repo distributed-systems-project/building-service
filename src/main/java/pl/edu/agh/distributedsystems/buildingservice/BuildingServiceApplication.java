@@ -3,6 +3,7 @@ package pl.edu.agh.distributedsystems.buildingservice;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Bean;
 import pl.edu.agh.distributedsystems.buildingservice.building.Building;
 import pl.edu.agh.distributedsystems.buildingservice.building.BuildingRepository;
@@ -13,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
+@EnableDiscoveryClient
 public class BuildingServiceApplication {
 
     public static void main(String[] args) {
