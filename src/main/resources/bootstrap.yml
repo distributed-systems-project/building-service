@@ -3,4 +3,4 @@ spring:
     name: building-service
   cloud:
     config:
-      uri: http://localhost:8088
+      uri: http://configuration:8088
