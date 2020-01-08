@@ -15,13 +15,8 @@ public class Address {
 
     @Id
     @Column(name = "address_id")
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    @MapsId
-    @OneToOne(mappedBy = "address")
-    @JoinColumn(name = "address_id")
-    @JsonIgnore
-    private Building building;
 
     private String houseNumber;
     private String street;

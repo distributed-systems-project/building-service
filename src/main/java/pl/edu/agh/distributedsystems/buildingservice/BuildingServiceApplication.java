@@ -43,7 +43,6 @@ public class BuildingServiceApplication {
         Building building = new Building("Hotel " + counter, 5);
         Address address = new Address("1", "Street", "111-22", "Krakow", "Poland");
         building.setAddress(address);
-        address.setBuilding(building);
         building.setRooms(generateRoomsForAllFloors(building, 5));
 
         return building;

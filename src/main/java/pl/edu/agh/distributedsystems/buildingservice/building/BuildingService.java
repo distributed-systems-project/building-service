@@ -23,9 +23,10 @@ public class BuildingService {
         return buildingRepository.findAll();
     }
 
-    void addBuilding(Building building) {
+    Building addBuilding(Building building) {
         System.out.println(building);
         buildingRepository.save(building);
+        return building;
     }
 
     Building findById(Long buildingId) {

@@ -25,8 +25,8 @@ public class BuildingController {
     }
 
     @PostMapping
-    public void addBuilding(@RequestBody Building building) {
-        buildingService.addBuilding(building);
+    public ResponseEntity<Building> addBuilding(@RequestBody Building building) {
+        return new ResponseEntity<>(buildingService.addBuilding(building), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
